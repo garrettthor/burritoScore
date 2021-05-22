@@ -25,10 +25,6 @@ a {
     color:rgb(192, 192, 192);
 }
 
-a:hover {
-    color:rgb(46, 115, 168);
-}
-
 ul {
     margin: 10;
     padding: 0;
@@ -49,13 +45,6 @@ input {
     margin: 5px;
 }
 
-.fa-star {
-    color: gold;
-}
-
-.fa-thumbs-up {
-    color: orange;
-}
 
 .container {
     display: flex;
@@ -98,6 +87,14 @@ input {
     border-radius: 2px;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-lil {
+    width: 40px;
+}
+
 .btn-bar {
     margin: 0;
     margin-top: 5px;
@@ -127,4 +124,12 @@ input {
     font-size: 20px;
     height: 40px;
     width: 60px;
+}
+
+.fa-star {
+    color: gold;
+}
+
+.fa-thumbs-up {
+    color: orange;
 }

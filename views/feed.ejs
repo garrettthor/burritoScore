@@ -26,12 +26,16 @@
 
     <% for(let i=0; i<burritoArray.length; i++) { %>
         <div class="nice-box">
-            <span><strong><%= burritoArray[i].burrito.establishment %></strong></span>
+            <div class="container">
+                <h4><%= burritoArray[i].burrito.establishment %></h4>
+                <h4>**USERNAME**</h4>
+            </div>
+                    
                     <p><%= burritoArray[i].burrito.burrito %></p>
                     <p><i class="fas fa-star"></i><%= burritoArray[i].burrito.stars %></p>
                     <p><%= burritoArray[i].burrito.file %></p>**Image**
                     <p><%= burritoArray[i].burrito.comment %></p>
-                    <p><i class="fas fa-thumbs-up"></i><%= burritoArray[i].likes %></p>
+                    <p><i class="fas fa-thumbs-up btn btn-lil"></i><%= burritoArray[i].likes %></p>
         </div>
     <% } %> 
 
