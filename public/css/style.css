@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Spartan', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+body {
+    background: rgb(240, 240, 240);
+    font-family: 'Spartan', Arial, Helvetica, sans-serif;
+}
+
+header {
+    line-height: 16px;
+}
+
+a {
+    font-family: 'Spartan', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color:rgb(192, 192, 192);
+}
+
+a:hover {
+    color:rgb(46, 115, 168);
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    margin: 10px;
+}
+
+nav {
+    display: flex;
+}
+
+input {
+    margin: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nice-box {
+    margin: 5px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    background: #fff;
+}
+
+.box-bottom-padding {
+    padding-bottom: 18px;
+}
+
+.btn {
+    display: block;
+    color: rgb(5, 58, 99);
+    font-family: 'Spartan', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 5px;
+    padding-top: 7px;
+    text-align: center;
+    width: 150px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid rgb(4, 58, 99);
+    border-radius: 2px;
+}
+
+.login-btn {
+    background: rgb(46, 115, 168);
+    color: #fff;
+}

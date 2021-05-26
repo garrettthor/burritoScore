@@ -4,29 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Spartan&display=swap" rel="stylesheet"> 
+    <link href="/css/style.css" rel="stylesheet">
     <title>Log In</title>
 </head>
 <body>
-    <h1>Log In</h1>
-    <a href="/">Home</a>
-    <a href="signup">Sign Up</a>
+    <header class="nice-box">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="profile">Profile</a></li> 
+                <li><a href="posts">Post</a></li>
+                <li><a href="feed">Feed</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    
     <% if (messages.error) { %>
     <%= messages.error %>
     <% } %> 
-    <div>
-        <form action ="/login" method="POST">
-            <div>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" required></input>
-            </div>
 
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required></input>
-            </div>
+    <div class="nice-box">
+        <h1>Log In</h1>
+
+        <div class="container">
+            <form action ="/login" method="POST">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" required></input>
+                </div>
     
-            <button type="submit">Log In</button>
-        </form>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required></input>
+                </div>
+    
+                <button class="btn login-btn" type="submit">Log In</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="container nice-box">
+        <p>No account?</p>
+        <a class="btn" href="signup">Sign up</a>
     </div>
     
 </body>

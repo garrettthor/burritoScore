@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Spartan&display=swap" rel="stylesheet"> 
+    <link href="/css/style.css" rel="stylesheet">
     <title>Sign Up</title>
 </head>
 <body>
-    <h1>Sign Up</h1>
-    <a href="/">Home</a>
-    <a href="login">Login</a>
+    <header class="nice-box">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="profile">Profile</a></li> 
+                <li><a href="posts">Post</a></li>
+                <li><a href="feed">Feed</a></li>
+            </ul>
+            
+        </nav>
+    </header>
 
-    <div>
+    <div class="nice-box">
+        <h1>Sign Up</h1>
+
         <form action ="/signup" method="POST">
             <div>
                 <label for="name">Name</label>
@@ -28,9 +41,14 @@
                 <input type="password" id="password" name="password" required></input>
             </div>
     
-            <button type="submit">Sign Up</button>
+            <button class="btn" type="submit">Sign up</button>
         </form>
         
+    </div>
+
+    <div class="container nice-box">
+        <p>Got an account?</p>
+        <a class="btn login-btn" href="login">Login</a>
     </div>
     
     
