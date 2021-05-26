@@ -4,32 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Spartan&display=swap" rel="stylesheet"> 
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db11a3d696.js" crossorigin="anonymous"></script>
     <title>Profile</title>
 </head>
 <body>
-    <h1>Hi, USERNAME</h1>
-    <a href="/">Home</a>
-    <a href="profile">Profile</a>
-    <a href="posts">Let me tell you bout a burrito I had...</a>
-    <a href="feed">Feed me the burritos</a>
-    <p>Profile info.</p>
+    <header class="nice-box">
+        <nav>
+            <ul>
+                <li><a href="/"><i class="fas fa-home fa-2x"></i></a></li>
+                <li><a href="profile"><i class="fas fa-user fa-2x"></i></a></li> 
+                <li><a href="posts"><i class="fas fa-plus-square fa-2x"></i></a></li>
+                <li><a href="feed"><i class="fas fa-list fa-2x"></i></a></li>
+            </ul>
+            
+        </nav>
+    </header>
 
+    <section class="profile-box">
+        <h1>Hi, USERNAME</h1>
+        <p>Profile info.</p>
+        <p>You have rated **420** burritos</p>
+        <p>Burrito Level:  **Legend**</p>
+    </section>
+ 
     <section>
         <h2>Burritos you have ranked:</h2>
 
-    <ul>
         <% for(let i=0; i<burritoArray.length; i++) { %>
-            <li><span><%= burritoArray[i].burrito.establishment %></span></li>
-            <ul>   
-                <li><span><%= burritoArray[i].burrito.burrito %></span></li>
-                <li><span><%= burritoArray[i].burrito.stars %></span></li>
-                <li><span>Image<%= burritoArray[i].burrito.file %></span></li>
-                <li><span><%= burritoArray[i].burrito.comment %></span></li>
-                <li><span>Likes: <%= burritoArray[i].likes %></span></li>
-            </ul>
-            
+            <div class="nice-box">
+                <span><strong><%= burritoArray[i].burrito.establishment %></strong></span>
+                        <p><%= burritoArray[i].burrito.burrito %></p>
+                        <p><i class="fas fa-star"></i><%= burritoArray[i].burrito.stars %></p>
+                        <p><%= burritoArray[i].burrito.file %></p>**Image**
+                        <p><%= burritoArray[i].burrito.comment %></p>
+                        <p><i class="fas fa-thumbs-up"></i><%= burritoArray[i].likes %></p>
+                        <i class="far fa-trash-alt btn btn-lil"></i>
+            </div>
         <% } %> 
-        </ul>
     </section>
     
     

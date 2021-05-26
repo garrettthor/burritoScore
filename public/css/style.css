@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Spartan', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+body {
+    background: rgb(240, 240, 240);
+    font-family: 'Spartan', Arial, Helvetica, sans-serif;
+}
+
+header {
+    line-height: 16px;
+}
+
+a {
+    font-family: 'Spartan', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color:rgb(192, 192, 192);
+}
+
+
+ul {
+    margin: 10;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    margin: 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: 5px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nice-box {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    background: #fff;
+}
+
+.profile-box {
+    margin: 5px;
+    margin-top: 15px;
+    padding: 5px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    background: rgb(140, 194, 230);
+}
+
+.box-bottom-padding {
+    padding-bottom: 18px;
+}
+
+.btn {
+    display: block;
+    color: rgb(5, 58, 99);
+    font-family: 'Spartan', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 5px;
+    padding-top: 7px;
+    text-align: center;
+    width: 150px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid rgb(4, 58, 99);
+    border-radius: 2px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-lil {
+    width: 40px;
+}
+
+.btn-bar {
+    margin: 0;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.login-btn {
+    background: rgb(46, 115, 168);
+    color: #fff;
+}
+
+.post-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.post-box input {
+    font-size: 20px;
+    width: 100%;
+}
+.post-box textarea {
+    width: 100%;
+    height: 10em;
+}
+
+.post-box select {
+    font-size: 20px;
+    height: 40px;
+    width: 60px;
+}
+
+.fa-star {
+    color: gold;
+}
+
+.fa-thumbs-up {
+    color: orange;
+}
