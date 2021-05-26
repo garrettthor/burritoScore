@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+</head>
+<body>
+    <h1>Rank that burrito!</h1>
+    <a href="/">Home</a>
+    <a href="profile">Profile</a>
+    <a href="posts">Let me tell you bout a burrito I had...</a>
+    <a href="feed">Feed me the burritos</a>
+
+    <form action="/createPost" method="POST">
+        <input type="text" placeholder="Establishment name" name="establishment">
+        <input type="text" placeholder="Type of burrito" name="burrito">
+        <br>
+        <label for="imgUpload" class="form-label">image</label>
+        <input type="file" id="imageUpload" name="file">
+        <br>
+        <select name="stars">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+        </select>
+        <br>
+        <textarea placeholder="Comments...?" name="comment"></textarea>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>

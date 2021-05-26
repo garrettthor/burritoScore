@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burrito Feed</title>
+</head>
+<body>
+    <h1>Burrito Feed</h1>
+    <a href="/">Home</a>
+    <a href="profile">Profile</a>
+    <a href="posts">Let me tell you bout a burrito I had...</a>
+    <a href="feed">Feed me the burritos</a>
+    <ul>
+    <% for(let i=0; i<burritoArray.length; i++) { %>
+        <li><span><%= burritoArray[i].burrito.establishment %></span></li>
+        <ul>   
+            <li><span><%= burritoArray[i].burrito.burrito %></span></li>
+            <li><span><%= burritoArray[i].burrito.stars %></span></li>
+            <li><span>Image<%= burritoArray[i].burrito.file %></span></li>
+            <li><span><%= burritoArray[i].burrito.comment %></span></li>
+            <li><span>Likes: <%= burritoArray[i].likes %></span></li>
+        </ul>
+        
+    <% } %> 
+    </ul>
+    
+</body>
+</html>
