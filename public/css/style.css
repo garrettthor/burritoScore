@@ -30,20 +30,31 @@ a:hover {
 }
 
 ul {
+    margin: 10;
+    padding: 0;
     list-style-type: none;
 }
 
 li {
     display: inline;
-    margin: 10px;
+    margin: 25px;
 }
 
 nav {
     display: flex;
+    justify-content: center;
 }
 
 input {
     margin: 5px;
+}
+
+.fa-star {
+    color: gold;
+}
+
+.fa-thumbs-up {
+    color: orange;
 }
 
 .container {
@@ -53,9 +64,19 @@ input {
 
 .nice-box {
     margin: 5px;
+    padding: 5px;
     border: 1px solid rgb(192, 192, 192);
     border-radius: 2px;
     background: #fff;
+}
+
+.profile-box {
+    margin: 5px;
+    margin-top: 15px;
+    padding: 5px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 2px;
+    background: rgb(140, 194, 230);
 }
 
 .box-bottom-padding {
@@ -77,7 +98,33 @@ input {
     border-radius: 2px;
 }
 
+.btn-bar {
+    margin: 0;
+    margin-top: 5px;
+    width: 100%;
+}
+
 .login-btn {
     background: rgb(46, 115, 168);
     color: #fff;
+}
+
+.post-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.post-box input {
+    font-size: 20px;
+    width: 100%;
+}
+.post-box textarea {
+    width: 100%;
+    height: 10em;
+}
+
+.post-box select {
+    font-size: 20px;
+    height: 40px;
+    width: 60px;
 }

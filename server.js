@@ -54,21 +54,21 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.get('/login', checkNotAuthenticated, (req, res) => {
+app.get('/login', /*checkNotAuthenticated,*/ (req, res) => {
     res.render('login');
 }); 
 
-app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
+app.post('/login', /*checkNotAuthenticated,*/ passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/login',
     failureFlash: true
 }))
 
-app.get('/signup', checkNotAuthenticated, (req, res) => {
+app.get('/signup', /*checkNotAuthenticated,*/ (req, res) => {
     res.render('signup');
 })
 
-app.post('/signup', checkNotAuthenticated, async (req, res) => {
+app.post('/signup', /*checkNotAuthenticated,*/ async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         db.collection('users').insertOne({
@@ -82,14 +82,14 @@ app.post('/signup', checkNotAuthenticated, async (req, res) => {
     console.log(users);
 });
 
-app.get('/profile', checkAuthenticated, (req, res) => {
+app.get('/profile', /*checkAuthenticated,*/ (req, res) => {
     db.collection('burritos').find().toArray()
     .then(data => {
         res.render('profile', { burritoArray: data });
     })
 })
 
-app.get('/feed', checkAuthenticated, (req, res) => {
+app.get('/feed', /*checkAuthenticated,*/ (req, res) => {
     db.collection('burritos').find().toArray()
     .then(data => {
         res.render('feed', { burritoArray: data });
@@ -97,11 +97,11 @@ app.get('/feed', checkAuthenticated, (req, res) => {
     
 });
 
-app.get('/posts', checkAuthenticated, (req, res) => {
+app.get('/posts', /*checkAuthenticated,*/ (req, res) => {
     res.render('posts');
 });
 
-app.post('/createPost', checkAuthenticated, (req, res) => {
+app.post('/createPost', /*checkAuthenticated,*/ (req, res) => {
     console.log(req.body);
     db.collection('burritos').insertOne({ burrito: req.body, likes: 0 })
     .then(result => {

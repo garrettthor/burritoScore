@@ -5,33 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Spartan&display=swap" rel="stylesheet"> 
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db11a3d696.js" crossorigin="anonymous"></script>  
     <title>Posts</title>
 </head>
 <body>
+    <header class="nice-box">
+        <nav>
+            <ul>
+                <li><a href="/"><i class="fas fa-home fa-2x"></i></a></li>
+                <li><a href="profile"><i class="fas fa-user fa-2x"></i></a></li> 
+                <li><a href="posts"><i class="fas fa-plus-square fa-2x"></i></a></li>
+                <li><a href="feed"><i class="fas fa-list fa-2x"></i></a></li>
+            </ul>
+            
+        </nav>
+    </header>
     <h1>Rank that burrito!</h1>
-    <a href="/">Home</a>
-    <a href="profile">Profile</a>
-    <a href="posts">Let me tell you bout a burrito I had...</a>
-    <a href="feed">Feed me the burritos</a>
-
-    <form action="/createPost" method="POST">
-        <input type="text" placeholder="Establishment name" name="establishment">
-        <input type="text" placeholder="Type of burrito" name="burrito">
-        <br>
-        <label for="imgUpload" class="form-label">image</label>
-        <input type="file" id="imageUpload" name="file">
-        <br>
-        <select name="stars">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5" selected>5</option>
-        </select>
-        <br>
-        <textarea placeholder="Comments...?" name="comment"></textarea>
-        <input type="submit" name="submit" value="Submit">
-    </form>
+    
+    <section class="nice-box post-box">
+        <form action="/createPost" method="POST">
+            <input type="text" placeholder="Establishment name" name="establishment">
+            <input type="text" placeholder="Type of burrito" name="burrito">
+            <div>
+                <label for="imgUpload" class="form-label">**?image</label>
+                <input type="file" id="imageUpload" name="file">
+            </div>
+            <div>
+                <i class="fas fa-star fa-2x"></i>
+                <select name="stars">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected>5</option>
+            </select>
+            </div>
+            
+            <textarea placeholder="Comments...?" name="comment"></textarea>
+            
+            <input class="btn btn-bar" type="submit" name="submit" value="Submit">
+        </form>
+    </section>
+    
 </body>
 </html>
