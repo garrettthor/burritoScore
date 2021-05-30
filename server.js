@@ -22,7 +22,7 @@ initializePassport(
 
 
 let db,
-    dbConnectionStr = 'mongodb+srv://garrett:b9XXT5qpAFNM6gA@cluster0.dv3rc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    dbConnectionStr = process.env.DB_STRING,
     dbName = 'burritoDb';
 
 
