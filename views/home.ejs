@@ -1,37 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Spartan&display=swap" rel="stylesheet"> 
-    <link href="/css/style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/db11a3d696.js" crossorigin="anonymous"></script>
-    <title>Y33t0z</title>
-</head>
-<body>
-    <header class="nice-box">
-        <nav>
-            <ul>
-                <li><a href="/"><i class="fas fa-home fa-2x"></i></a></li>
-                <li><a href="profile"><i class="fas fa-user fa-2x"></i></a></li> 
-                <li><a href="posts"><i class="fas fa-plus-square fa-2x"></i></a></li>
-                <li><a href="feed"><i class="fas fa-list fa-2x"></i></a></li>
-            </ul>
-            
-        </nav>
-    </header>
-    <div class="nice-box box-bottom-padding">
-        <h1>YEETOZ</h1>
-        <h3>Tell me all about that 🌯.</h3>
+<%- include('partials/head') %>
 
-        <section class="container">
-            <a class="btn login-btn" href="login">Log in</a>
-            <a class="btn" href="signup">Sign up</a>
-        </section>
-    </div>
-    
+<body>
+
+<%- include('partials/nav') %> 
+
+<div class="nice-box box-bottom-padding">
+    <h1>YEETOZ</h1>
+    <h3>Tell me all about that 🌯.</h3>
+
+    <section class="container">
+        <a class="btn login-btn" href="login">Log in</a>
+        <a class="btn" href="signup">Sign up</a>
+    </section>
+</div>
 
 </body>
-</html>
+
+<%- include('partials/footer') %> 

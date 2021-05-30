@@ -1,43 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Spartan&display=swap" rel="stylesheet"> 
-    <link href="/css/style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/db11a3d696.js" crossorigin="anonymous"></script>
-    <title>Burrito Feed</title>
-</head>
-<body>
-    <header class="nice-box">
-        <nav>
-            <ul>
-                <li><a href="/"><i class="fas fa-home fa-2x"></i></a></li>
-                <li><a href="profile"><i class="fas fa-user fa-2x"></i></a></li> 
-                <li><a href="posts"><i class="fas fa-plus-square fa-2x"></i></a></li>
-                <li><a href="feed"><i class="fas fa-list fa-2x"></i></a></li>
-            </ul>
-            
-        </nav>
-    </header>
-    <h1>Feed me burritos!</h1>
+<%- include('partials/head')  %>
 
-    <% for(let i=0; i<burritoArray.length; i++) { %>
-        <div class="nice-box">
-            <div class="container">
-                <h4><%= burritoArray[i].burrito.establishment %></h4>
-                <h4>**USERNAME**</h4>
-            </div>
-                    
-                    <p><%= burritoArray[i].burrito.burrito %></p>
-                    <p><i class="fas fa-star"></i><%= burritoArray[i].burrito.stars %></p>
-                    <p><%= burritoArray[i].burrito.file %></p>**Image**
-                    <p><%= burritoArray[i].burrito.comment %></p>
-                    <p><i class="fas fa-thumbs-up btn btn-lil"></i><%= burritoArray[i].likes %></p>
+<body>
+    
+<%- include('partials/nav') %>
+
+<h1>Feed me burritos!</h1>
+
+<% for(let i=0; i<burritoArray.length; i++) { %>
+    <div class="nice-box">
+        <div class="container">
+            <h4><%= burritoArray[i].burrito.establishment %></h4>
+            <h4>**USERNAME**</h4>
         </div>
-    <% } %> 
+                
+                <p><%= burritoArray[i].burrito.burrito %></p>
+                <p><i class="fas fa-star"></i><%= burritoArray[i].burrito.stars %></p>
+                <p><%= burritoArray[i].burrito.file %></p>**Image**
+                <p><%= burritoArray[i].burrito.comment %></p>
+                <p><i class="fas fa-thumbs-up btn btn-lil"></i><%= burritoArray[i].likes %></p>
+    </div>
+<% } %> 
 
 </body>
-</html>
+
+<%- include('partials/footer')  %> 

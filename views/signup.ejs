@@ -1,42 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Spartan&display=swap" rel="stylesheet"> 
-    <link href="/css/style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/db11a3d696.js" crossorigin="anonymous"></script>
-    <title>Sign Up</title>
-</head>
-<body>
-    <header class="nice-box">
-        <nav>
-            <ul>
-                <li><a href="/"><i class="fas fa-home fa-2x"></i></a></li>
-                <li><a href="profile"><i class="fas fa-user fa-2x"></i></a></li> 
-                <li><a href="posts"><i class="fas fa-plus-square fa-2x"></i></a></li>
-                <li><a href="feed"><i class="fas fa-list fa-2x"></i></a></li>
-            </ul>
-            
-        </nav>
-    </header>
-    
-    <div class="nice-box">
-        <h1>Sign Up</h1>
+<%- include('partials/head')  %>
 
+<body>
+
+<%- include('partials/nav') %>
+
+<div class="nice-box">
+    <h1>Sign Up</h1>
+
+    <div class="container">
         <form action ="/signup" method="POST">
             <div>
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required></input>
             </div>
-
+    
             <div>
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" required></input>
             </div>
-
+    
             <div>
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required></input>
@@ -44,14 +26,15 @@
     
             <button class="btn" type="submit">Sign up</button>
         </form>
-        
     </div>
+    
+</div>
 
-    <div class="container nice-box">
-        <p>Got an account?</p>
-        <a class="btn login-btn" href="login">Login</a>
-    </div>
-    
-    
+<div class="container nice-box">
+    <p>Got an account?</p>
+    <a class="btn login-btn" href="login">Login</a>
+</div>
+
 </body>
-</html>
+
+<%- include('partials/footer')  %> 
